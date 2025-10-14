@@ -110,5 +110,4 @@ Deze tool is bedoeld voor educatieve doeleinden en legitiem security testing. Sc
 Gebouwd met ❤️ voor de infosec community.
 
 ---
-
 **Made with 💚 by [IamKenii]**
