@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nmap Command Generator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Nmap Command Generator</h1>
+            <p>Genereer professionele Nmap scan commando's met een paar klikken</p>
+        </div>
+
+        <div class="content">
+            <!-- Target Selection -->
+            <div class="section">
+                <div class="section-title">Doelwit Selectie</div>
+                
+                <div class="input-group">
+                    <label>Scan Type:</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="single" name="targetType" value="single" checked>
+                            <label for="single">Enkele Host</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="network" name="targetType" value="network">
+                            <label for="network">Netwerkadres</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="target">IP Adres / Netwerk:</label>
+                    <input type="text" id="target" placeholder="bijv. 192.168.1.1 of 192.168.1.0/24">
+                </div>
+            </div>
+
+            <!-- Scan Options -->
+            <div class="section">
+                <div class="section-title">Scan Opties</div>
+                <div id="scanOptions"></div>
+            </div>
+
+            <!-- OS Selection -->
+            <div class="section">
+                <div class="section-title">Attack Machine OS</div>
+                <div class="input-group">
+                    <select id="osSelect">
+                        <option value="linux">Linux</option>
+                        <option value="macos">macOS</option>
+                        <option value="windows">Windows</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Output -->
+            <div class="output-section">
+                <h3>📋 Gegenereerd Commando:</h3>
+                <div class="command-output" id="commandOutput">
+                    Selecteer opties om een commando te genereren...
+                </div>
+                <button class="copy-btn" onclick="controller.copyCommand()">Kopieer naar Klembord</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include external files -->
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/model.js"></script>
+    <script src="./assets/js/view.js"></script>
+    <script src="./assets/js/controller.js"></script>
+    <script>
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            controller.init();
+        });
+    </script>
+</body>
+</html>
