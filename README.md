@@ -17,7 +17,7 @@ Een moderne, gebruiksvriendelijke web-based tool voor het genereren van Nmap sca
 
 ## 🚀 Live Demo
 
-Bezoek [nmapgen.github.io](https://nmapgen.github.io)
+Bezoek [Iamkenii.github.io/nmapscanner](Iamkenii.github.io/nmapscanner)
 
 ## 📦 Features Overzicht
 
@@ -43,7 +43,7 @@ Gewoon de website bezoeken - geen installatie nodig!
 
 ### Lokaal Draaien
 ```bash
-git clone https://github.com/IamKenii/nmapgen.github.io.git
+git clone https://github.com/IamKenii/nmapscanner.git
 cd nmap-generator
 # Open index.html in je browser
 ```
