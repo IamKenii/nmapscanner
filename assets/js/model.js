@@ -2,9 +2,7 @@
 const model = {
     // State
     state: {
-        targetType: 'single',
         target: '',
-        os: 'linux',
         selectedOptions: {} // {categoryKey_index: {flag, value}}
     },
 
