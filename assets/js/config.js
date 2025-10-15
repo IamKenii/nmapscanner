@@ -10,130 +10,130 @@ const nmapConfig = {
     "scanTypes": {
         "name": "Scan Types",
         "options": [
-            {"flag": "-sS", "name": "TCP SYN Scan", "desc": "Stealth scan (standaard)", "valueType": null},
-            {"flag": "-sT", "name": "TCP Connect Scan", "desc": "Volledige TCP verbinding", "valueType": null},
-            {"flag": "-sU", "name": "UDP Scan", "desc": "Scan UDP poorten", "valueType": null},
-            {"flag": "-sA", "name": "TCP ACK Scan", "desc": "Detecteer firewall regels", "valueType": null},
-            {"flag": "-sW", "name": "TCP Window Scan", "desc": "Window scan", "valueType": null},
-            {"flag": "-sM", "name": "TCP Maimon Scan", "desc": "Maimon scan", "valueType": null},
-            {"flag": "-sN", "name": "TCP Null Scan", "desc": "Null scan", "valueType": null},
-            {"flag": "-sF", "name": "TCP FIN Scan", "desc": "FIN scan", "valueType": null},
-            {"flag": "-sX", "name": "TCP Xmas Scan", "desc": "Xmas scan", "valueType": null},
-            {"flag": "-sV", "name": "Version Detection", "desc": "Detecteer service versies", "valueType": null},
-            {"flag": "-sC", "name": "Default Scripts", "desc": "Voer standaard NSE scripts uit", "valueType": null}
+            {"flag": "-sS", "name": "-sS", "desc": "TCP SYN Scan (Stealth scan, standaard)", "valueType": null},
+            {"flag": "-sT", "name": "-sT", "desc": "TCP Connect Scan (Volledige TCP verbinding)", "valueType": null},
+            {"flag": "-sU", "name": "-sU", "desc": "UDP Scan (Scan UDP poorten)", "valueType": null},
+            {"flag": "-sA", "name": "-sA", "desc": "TCP ACK Scan (Detecteer firewall regels)", "valueType": null},
+            {"flag": "-sW", "name": "-sW", "desc": "TCP Window Scan", "valueType": null},
+            {"flag": "-sM", "name": "-sM", "desc": "TCP Maimon Scan", "valueType": null},
+            {"flag": "-sN", "name": "-sN", "desc": "TCP Null Scan", "valueType": null},
+            {"flag": "-sF", "name": "-sF", "desc": "TCP FIN Scan", "valueType": null},
+            {"flag": "-sX", "name": "-sX", "desc": "TCP Xmas Scan", "valueType": null},
+            {"flag": "-sV", "name": "-sV", "desc": "Version Detection (Detecteer service versies)", "valueType": null},
+            {"flag": "-sC", "name": "-sC", "desc": "Default Scripts (Voer standaard NSE scripts uit)", "valueType": null}
         ]
     },
     "hostDiscovery": {
         "name": "Host Discovery",
         "options": [
-            {"flag": "-Pn", "name": "Skip Ping", "desc": "Behandel alle hosts als online", "valueType": null},
-            {"flag": "-PS", "name": "TCP SYN Ping", "desc": "TCP SYN discovery", "valueType": "ports", "placeholder": "22,80,443"},
-            {"flag": "-PA", "name": "TCP ACK Ping", "desc": "TCP ACK discovery", "valueType": "ports", "placeholder": "22,80,443"},
-            {"flag": "-PU", "name": "UDP Ping", "desc": "UDP discovery", "valueType": "ports", "placeholder": "53,161"},
-            {"flag": "-PE", "name": "ICMP Echo Ping", "desc": "ICMP echo request", "valueType": null},
-            {"flag": "-PP", "name": "ICMP Timestamp Ping", "desc": "ICMP timestamp", "valueType": null},
-            {"flag": "-PM", "name": "ICMP Netmask Ping", "desc": "ICMP netmask", "valueType": null}
+            {"flag": "-Pn", "name": "-Pn", "desc": "Skip Ping (Behandel alle hosts als online)", "valueType": null},
+            {"flag": "-PS", "name": "-PS", "desc": "TCP SYN Ping (TCP SYN discovery)", "valueType": "ports", "placeholder": "22,80,443"},
+            {"flag": "-PA", "name": "-PA", "desc": "TCP ACK Ping (TCP ACK discovery)", "valueType": "ports", "placeholder": "22,80,443"},
+            {"flag": "-PU", "name": "-PU", "desc": "UDP Ping (UDP discovery)", "valueType": "ports", "placeholder": "53,161"},
+            {"flag": "-PE", "name": "-PE", "desc": "ICMP Echo Ping (ICMP echo request)", "valueType": null},
+            {"flag": "-PP", "name": "-PP", "desc": "ICMP Timestamp Ping", "valueType": null},
+            {"flag": "-PM", "name": "-PM", "desc": "ICMP Netmask Ping", "valueType": null}
         ]
     },
     "portSpecification": {
-        "name": "Port Specificatie",
+        "name": "Port Specification",
         "options": [
-            {"flag": "-p-", "name": "All Ports", "desc": "Scan alle 65535 poorten", "valueType": null},
-            {"flag": "-p", "name": "Custom Ports", "desc": "Specifieke poorten of ranges", "valueType": "ports", "placeholder": "80,443,8000-9000"},
-            {"flag": "-F", "name": "Fast Scan", "desc": "Scan 100 meest voorkomende poorten", "valueType": null},
-            {"flag": "--top-ports", "name": "Top Ports", "desc": "Scan top N poorten", "valueType": "number", "placeholder": "100"},
-            {"flag": "--port-ratio", "name": "Port Ratio", "desc": "Scan poorten boven ratio", "valueType": "number", "placeholder": "0.1"}
+            {"flag": "-p-", "name": "-p-", "desc": "All Ports (Scan alle 65535 poorten)", "valueType": null},
+            {"flag": "-p", "name": "-p", "desc": "Custom Ports (Specifieke poorten of ranges)", "valueType": "ports", "placeholder": "80,443,8000-9000"},
+            {"flag": "-F", "name": "-F", "desc": "Fast Scan (Scan 100 meest voorkomende poorten)", "valueType": null},
+            {"flag": "--top-ports", "name": "--top-ports", "desc": "Top Ports (Scan top N poorten)", "valueType": "number", "placeholder": "100"},
+            {"flag": "--port-ratio", "name": "--port-ratio", "desc": "Port Ratio (Scan poorten boven ratio)", "valueType": "number", "placeholder": "0.1"}
         ]
     },
     "timingPerformance": {
         "name": "Timing & Performance",
         "options": [
-            {"flag": "-T0", "name": "Paranoid", "desc": "Extreem langzaam (IDS evasion)", "valueType": null},
-            {"flag": "-T1", "name": "Sneaky", "desc": "Zeer langzaam", "valueType": null},
-            {"flag": "-T2", "name": "Polite", "desc": "Langzaam", "valueType": null},
-            {"flag": "-T3", "name": "Normal", "desc": "Standaard snelheid", "valueType": null},
-            {"flag": "-T4", "name": "Aggressive", "desc": "Snel (aanbevolen)", "valueType": null},
-            {"flag": "-T5", "name": "Insane", "desc": "Zeer snel", "valueType": null},
-            {"flag": "--min-rate", "name": "Min Rate", "desc": "Minimum packets per seconde", "valueType": "number", "placeholder": "100"},
-            {"flag": "--max-rate", "name": "Max Rate", "desc": "Maximum packets per seconde", "valueType": "number", "placeholder": "1000"},
-            {"flag": "--min-parallelism", "name": "Min Parallelism", "desc": "Minimum parallelle probes", "valueType": "number", "placeholder": "10"},
-            {"flag": "--max-parallelism", "name": "Max Parallelism", "desc": "Maximum parallelle probes", "valueType": "number", "placeholder": "100"},
-            {"flag": "--host-timeout", "name": "Host Timeout", "desc": "Timeout per host (ms)", "valueType": "text", "placeholder": "30m"}
+            {"flag": "-T0", "name": "-T0", "desc": "Paranoid (Extreem langzaam - IDS evasion)", "valueType": null},
+            {"flag": "-T1", "name": "-T1", "desc": "Sneaky (Zeer langzaam)", "valueType": null},
+            {"flag": "-T2", "name": "-T2", "desc": "Polite (Langzaam)", "valueType": null},
+            {"flag": "-T3", "name": "-T3", "desc": "Normal (Standaard snelheid)", "valueType": null},
+            {"flag": "-T4", "name": "-T4", "desc": "Aggressive (Snel - aanbevolen)", "valueType": null},
+            {"flag": "-T5", "name": "-T5", "desc": "Insane (Zeer snel)", "valueType": null},
+            {"flag": "--min-rate", "name": "--min-rate", "desc": "Minimum packets per seconde", "valueType": "number", "placeholder": "100"},
+            {"flag": "--max-rate", "name": "--max-rate", "desc": "Maximum packets per seconde", "valueType": "number", "placeholder": "1000"},
+            {"flag": "--min-parallelism", "name": "--min-parallelism", "desc": "Minimum parallelle probes", "valueType": "number", "placeholder": "10"},
+            {"flag": "--max-parallelism", "name": "--max-parallelism", "desc": "Maximum parallelle probes", "valueType": "number", "placeholder": "100"},
+            {"flag": "--host-timeout", "name": "--host-timeout", "desc": "Timeout per host", "valueType": "text", "placeholder": "30m"}
         ]
     },
     "osDetection": {
         "name": "OS & Service Detection",
         "options": [
-            {"flag": "-O", "name": "OS Detection", "desc": "Detecteer besturingssysteem", "valueType": null},
-            {"flag": "-A", "name": "Aggressive Scan", "desc": "OS, versie, script, traceroute", "valueType": null},
-            {"flag": "--osscan-guess", "name": "Guess OS", "desc": "Agressiever OS detectie", "valueType": null},
-            {"flag": "--osscan-limit", "name": "OS Scan Limit", "desc": "Limiteer OS detectie", "valueType": null},
-            {"flag": "--version-intensity", "name": "Version Intensity", "desc": "Versie detectie intensiteit (0-9)", "valueType": "number", "placeholder": "5"},
-            {"flag": "--version-light", "name": "Light Version", "desc": "Lichte versie detectie", "valueType": null},
-            {"flag": "--version-all", "name": "All Version", "desc": "Probeer elke probe", "valueType": null}
+            {"flag": "-O", "name": "-O", "desc": "OS Detection (Detecteer besturingssysteem)", "valueType": null},
+            {"flag": "-A", "name": "-A", "desc": "Aggressive Scan (OS, versie, script, traceroute)", "valueType": null},
+            {"flag": "--osscan-guess", "name": "--osscan-guess", "desc": "Guess OS (Agressiever OS detectie)", "valueType": null},
+            {"flag": "--osscan-limit", "name": "--osscan-limit", "desc": "OS Scan Limit (Limiteer OS detectie)", "valueType": null},
+            {"flag": "--version-intensity", "name": "--version-intensity", "desc": "Version Intensity (0-9)", "valueType": "number", "placeholder": "5"},
+            {"flag": "--version-light", "name": "--version-light", "desc": "Light Version (Lichte versie detectie)", "valueType": null},
+            {"flag": "--version-all", "name": "--version-all", "desc": "All Version (Probeer elke probe)", "valueType": null}
         ]
     },
     "nseScripts": {
         "name": "NSE Scripts",
         "options": [
-            {"flag": "--script=default", "name": "Default Scripts", "desc": "Standaard script set", "valueType": null},
-            {"flag": "--script=vuln", "name": "Vulnerability Scan", "desc": "Scan naar bekende kwetsbaarheden", "valueType": null},
-            {"flag": "--script=exploit", "name": "Exploit Scripts", "desc": "Exploit scripts", "valueType": null},
-            {"flag": "--script=auth", "name": "Auth Scripts", "desc": "Authenticatie scripts", "valueType": null},
-            {"flag": "--script=brute", "name": "Brute Force", "desc": "Brute force scripts", "valueType": null},
-            {"flag": "--script=discovery", "name": "Discovery Scripts", "desc": "Discovery scripts", "valueType": null},
-            {"flag": "--script=dos", "name": "DoS Scripts", "desc": "Denial of Service scripts", "valueType": null},
-            {"flag": "--script=malware", "name": "Malware Detection", "desc": "Detecteer malware", "valueType": null},
-            {"flag": "--script", "name": "Custom Script", "desc": "Specifieke script(s)", "valueType": "text", "placeholder": "http-title,ssl-cert"},
-            {"flag": "--script-args", "name": "Script Arguments", "desc": "Argumenten voor scripts", "valueType": "text", "placeholder": "user=admin,pass=test"}
+            {"flag": "--script=default", "name": "--script=default", "desc": "Default Scripts (Standaard script set)", "valueType": null},
+            {"flag": "--script=vuln", "name": "--script=vuln", "desc": "Vulnerability Scan (Bekende kwetsbaarheden)", "valueType": null},
+            {"flag": "--script=exploit", "name": "--script=exploit", "desc": "Exploit Scripts", "valueType": null},
+            {"flag": "--script=auth", "name": "--script=auth", "desc": "Auth Scripts (Authenticatie)", "valueType": null},
+            {"flag": "--script=brute", "name": "--script=brute", "desc": "Brute Force Scripts", "valueType": null},
+            {"flag": "--script=discovery", "name": "--script=discovery", "desc": "Discovery Scripts", "valueType": null},
+            {"flag": "--script=dos", "name": "--script=dos", "desc": "DoS Scripts (Denial of Service)", "valueType": null},
+            {"flag": "--script=malware", "name": "--script=malware", "desc": "Malware Detection (Detecteer malware)", "valueType": null},
+            {"flag": "--script", "name": "--script", "desc": "Custom Script (Specifieke script naam)", "valueType": "text", "placeholder": "http-title,ssl-cert"},
+            {"flag": "--script-args", "name": "--script-args", "desc": "Script Arguments", "valueType": "text", "placeholder": "user=admin,pass=test"}
         ]
     },
     "firewallEvasion": {
         "name": "Firewall/IDS Evasion",
         "options": [
-            {"flag": "-f", "name": "Fragment Packets", "desc": "Fragmenteer packets", "valueType": null},
-            {"flag": "--mtu", "name": "MTU Size", "desc": "Aangepaste MTU grootte", "valueType": "number", "placeholder": "24"},
-            {"flag": "-D", "name": "Decoy Scan", "desc": "Gebruik decoy IP's", "valueType": "text", "placeholder": "RND:10 of ME,192.168.1.5"},
-            {"flag": "-S", "name": "Spoof Source", "desc": "Vervals bron IP", "valueType": "ip", "placeholder": "192.168.1.100"},
-            {"flag": "-e", "name": "Interface", "desc": "Gebruik specifieke interface", "valueType": "text", "placeholder": "eth0"},
-            {"flag": "--source-port", "name": "Source Port", "desc": "Gebruik specifieke bron poort", "valueType": "number", "placeholder": "53"},
-            {"flag": "--data-length", "name": "Data Length", "desc": "Append random data", "valueType": "number", "placeholder": "200"},
-            {"flag": "--randomize-hosts", "name": "Randomize Hosts", "desc": "Randomiseer volgorde", "valueType": null},
-            {"flag": "--spoof-mac", "name": "Spoof MAC", "desc": "Vervals MAC adres", "valueType": "text", "placeholder": "0 of AA:BB:CC:DD:EE:FF"},
-            {"flag": "--badsum", "name": "Bad Checksum", "desc": "Verzend packets met foute checksum", "valueType": null},
-            {"flag": "--ttl", "name": "TTL Value", "desc": "Stel IP TTL in", "valueType": "number", "placeholder": "64"}
+            {"flag": "-f", "name": "-f", "desc": "Fragment Packets (Fragmenteer packets)", "valueType": null},
+            {"flag": "--mtu", "name": "--mtu", "desc": "MTU Size (Aangepaste MTU grootte)", "valueType": "number", "placeholder": "24"},
+            {"flag": "-D", "name": "-D", "desc": "Decoy Scan (Gebruik decoy IP's)", "valueType": "text", "placeholder": "RND:10 of ME,192.168.1.5"},
+            {"flag": "-S", "name": "-S", "desc": "Spoof Source (Vervals bron IP)", "valueType": "ip", "placeholder": "192.168.1.100"},
+            {"flag": "-e", "name": "-e", "desc": "Interface (Specifieke network interface)", "valueType": "text", "placeholder": "eth0"},
+            {"flag": "--source-port", "name": "--source-port", "desc": "Source Port (Specifieke bron poort)", "valueType": "number", "placeholder": "53"},
+            {"flag": "--data-length", "name": "--data-length", "desc": "Data Length (Append random data)", "valueType": "number", "placeholder": "200"},
+            {"flag": "--randomize-hosts", "name": "--randomize-hosts", "desc": "Randomize Hosts (Randomiseer volgorde)", "valueType": null},
+            {"flag": "--spoof-mac", "name": "--spoof-mac", "desc": "Spoof MAC (Vervals MAC adres)", "valueType": "text", "placeholder": "0 of AA:BB:CC:DD:EE:FF"},
+            {"flag": "--badsum", "name": "--badsum", "desc": "Bad Checksum (Foute checksum voor evasion)", "valueType": null},
+            {"flag": "--ttl", "name": "--ttl", "desc": "TTL Value (Stel IP TTL in)", "valueType": "number", "placeholder": "64"}
         ]
     },
     "output": {
-        "name": "Output Opties",
+        "name": "Output Options",
         "options": [
-            {"flag": "-oN", "name": "Normal Output", "desc": "Normale output naar bestand", "valueType": "text", "placeholder": "output.txt"},
-            {"flag": "-oX", "name": "XML Output", "desc": "XML output", "valueType": "text", "placeholder": "output.xml"},
-            {"flag": "-oG", "name": "Grepable Output", "desc": "Grepable formaat", "valueType": "text", "placeholder": "output.grep"},
-            {"flag": "-oA", "name": "All Formats", "desc": "Output in alle formaten", "valueType": "text", "placeholder": "output"},
-            {"flag": "-v", "name": "Verbose", "desc": "Uitgebreide output", "valueType": null},
-            {"flag": "-vv", "name": "Very Verbose", "desc": "Zeer uitgebreide output", "valueType": null},
-            {"flag": "-d", "name": "Debug", "desc": "Debug mode", "valueType": null},
-            {"flag": "-dd", "name": "More Debug", "desc": "Meer debug info", "valueType": null},
-            {"flag": "--reason", "name": "Show Reason", "desc": "Toon reden voor poort status", "valueType": null},
-            {"flag": "--open", "name": "Only Open", "desc": "Toon alleen open poorten", "valueType": null},
-            {"flag": "--packet-trace", "name": "Packet Trace", "desc": "Toon verzonden/ontvangen packets", "valueType": null},
-            {"flag": "--append-output", "name": "Append Output", "desc": "Voeg toe aan bestaande output", "valueType": null}
+            {"flag": "-oN", "name": "-oN", "desc": "Normal Output (Normale output naar bestand)", "valueType": "text", "placeholder": "output.txt"},
+            {"flag": "-oX", "name": "-oX", "desc": "XML Output", "valueType": "text", "placeholder": "output.xml"},
+            {"flag": "-oG", "name": "-oG", "desc": "Grepable Output", "valueType": "text", "placeholder": "output.grep"},
+            {"flag": "-oA", "name": "-oA", "desc": "All Formats (Output in alle formaten)", "valueType": "text", "placeholder": "output"},
+            {"flag": "-v", "name": "-v", "desc": "Verbose (Uitgebreide output)", "valueType": null},
+            {"flag": "-vv", "name": "-vv", "desc": "Very Verbose (Zeer uitgebreide output)", "valueType": null},
+            {"flag": "-d", "name": "-d", "desc": "Debug Mode", "valueType": null},
+            {"flag": "-dd", "name": "-dd", "desc": "More Debug (Meer debug info)", "valueType": null},
+            {"flag": "--reason", "name": "--reason", "desc": "Show Reason (Toon reden voor poort status)", "valueType": null},
+            {"flag": "--open", "name": "--open", "desc": "Only Open (Toon alleen open poorten)", "valueType": null},
+            {"flag": "--packet-trace", "name": "--packet-trace", "desc": "Packet Trace (Toon packets)", "valueType": null},
+            {"flag": "--append-output", "name": "--append-output", "desc": "Append Output (Voeg toe aan bestaand bestand)", "valueType": null}
         ]
     },
     "misc": {
-        "name": "Overige Opties",
+        "name": "Miscellaneous Options",
         "options": [
-            {"flag": "-6", "name": "IPv6", "desc": "Enable IPv6 scanning", "valueType": null},
-            {"flag": "-n", "name": "No DNS", "desc": "Geen DNS resolutie", "valueType": null},
-            {"flag": "-R", "name": "Always DNS", "desc": "Altijd DNS resolutie", "valueType": null},
-            {"flag": "--dns-servers", "name": "DNS Servers", "desc": "Aangepaste DNS servers", "valueType": "text", "placeholder": "8.8.8.8,1.1.1.1"},
-            {"flag": "--traceroute", "name": "Traceroute", "desc": "Trace pad naar host", "valueType": null},
-            {"flag": "--privileged", "name": "Privileged", "desc": "Assume privileges", "valueType": null},
-            {"flag": "--unprivileged", "name": "Unprivileged", "desc": "Assume no privileges", "valueType": null},
-            {"flag": "-iL", "name": "Input from File", "desc": "Lees targets van bestand", "valueType": "text", "placeholder": "targets.txt"},
-            {"flag": "--exclude", "name": "Exclude Hosts", "desc": "Exclusief hosts/netwerken", "valueType": "text", "placeholder": "192.168.1.1"},
-            {"flag": "--excludefile", "name": "Exclude File", "desc": "Exclusief hosts van bestand", "valueType": "text", "placeholder": "exclude.txt"}
+            {"flag": "-6", "name": "-6", "desc": "IPv6 (Enable IPv6 scanning)", "valueType": null},
+            {"flag": "-n", "name": "-n", "desc": "No DNS (Geen DNS resolutie)", "valueType": null},
+            {"flag": "-R", "name": "-R", "desc": "Always DNS (Altijd DNS resolutie)", "valueType": null},
+            {"flag": "--dns-servers", "name": "--dns-servers", "desc": "DNS Servers (Aangepaste DNS servers)", "valueType": "text", "placeholder": "8.8.8.8,1.1.1.1"},
+            {"flag": "--traceroute", "name": "--traceroute", "desc": "Traceroute (Trace pad naar host)", "valueType": null},
+            {"flag": "--privileged", "name": "--privileged", "desc": "Privileged Mode (Assume privileges)", "valueType": null},
+            {"flag": "--unprivileged", "name": "--unprivileged", "desc": "Unprivileged Mode (Assume no privileges)", "valueType": null},
+            {"flag": "-iL", "name": "-iL", "desc": "Input from File (Lees targets van bestand)", "valueType": "text", "placeholder": "targets.txt"},
+            {"flag": "--exclude", "name": "--exclude", "desc": "Exclude Hosts (Exclusief hosts/netwerken)", "valueType": "text", "placeholder": "192.168.1.1"},
+            {"flag": "--excludefile", "name": "--excludefile", "desc": "Exclude File (Exclusief hosts van bestand)", "valueType": "text", "placeholder": "exclude.txt"}
         ]
     }
 };
